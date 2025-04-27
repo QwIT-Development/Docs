@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Ipa Telepítés - QwIT Docs</title>
+        <title>Home - QwIT Docs</title>
 
 
         <!-- Custom HTML head -->
@@ -155,237 +155,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="a-firka-ipa-fájlainak-telepítéséhez-kövesd-ezt-az-útmutatót"><a class="header" href="#a-firka-ipa-fájlainak-telepítéséhez-kövesd-ezt-az-útmutatót"><img src="https://github.com/user-attachments/assets/dadb8ed3-7073-4591-a004-0d4c646fa963" alt width="24px"> A Firka IPA fájlainak telepítéséhez kövesd ezt az útmutatót.</a></h1>
-<p>Három lehetőséged van a Firka telepítésére:</p>
-<ul>
-<li><a href="#1-feather-met%C3%B3dus">Feather</a> - Fizetős, nem kell gép hozzá, 1 évre érvényes (ha lejár a certificate, újra meg kell vásárolni!)</li>
-<li><a href="#2-esign-met%C3%B3dus">ESign</a> - Ingyenes, nem kell gép hozzá, örökre van (ajánlott)</li>
-<li><a href="#3-sidestore-met%C3%B3dus-a-sidestore-az-altstore-nak-egy-jobb-verzi%C3%B3ja">SideStore</a> - Ingyenes, kell hozzá Mac, viszont Windowsal is működik, 7 naponta resign (telefonon megteheted lejárat előtt.)</li>
-</ul>
-<h2 id="1-feather-metódus"><a class="header" href="#1-feather-metódus">1. Feather metódus</a></h2>
-<h3 id="1-a-p12-és-mobileprovision-beszerzése"><a class="header" href="#1-a-p12-és-mobileprovision-beszerzése">1. A .p12 és .mobileprovision beszerzése</a></h3>
-<ul>
-<li>Vegyél certet a <a href="https://kravasign.com">kravasign.com</a> oldalon</li>
-<li>Várnod kell kis időt (általában 72 óra)</li>
-<li>Csatlakozz a <a href="https://discord.gg/kravasign">Discord szerverükhöz</a> és nyiss egy ticketet a rendelési számoddal</li>
-</ul>
-<h3 id="2-a-várakozás-után-kapsz-egy-letöltési-linket-egy-zip-fájlhoz-ami-három-dolgot-tartalmaz"><a class="header" href="#2-a-várakozás-után-kapsz-egy-letöltési-linket-egy-zip-fájlhoz-ami-három-dolgot-tartalmaz">2. A várakozás után kapsz egy letöltési linket egy zip fájlhoz, ami három dolgot tartalmaz:</a></h3>
-<ul>
-<li>.p12</li>
-<li>.mobileprovision</li>
-<li>Egy mappa a tanúsítvány jelszavával</li>
-</ul>
-<h3 id="3-töltsd-le-a-legújabb-feather-ipa-t-innen-feather-github-releases"><a class="header" href="#3-töltsd-le-a-legújabb-feather-ipa-t-innen-feather-github-releases">3. Töltsd le a legújabb Feather ipa-t innen: <a href="https://github.com/khcrysalis/Feather/releases">Feather GitHub Releases</a></a></h3>
-<h3 id="4-telepítés"><a class="header" href="#4-telepítés">4. Telepítés:</a></h3>
-<ul>
-<li>Menj a sign.kravasign.com oldalra</li>
-<li>Töltsd fel a szükséges fájlokat:
-<ul>
-<li>.p12</li>
-<li>.mobileprovision</li>
-<li>feather.ipa</li>
-<li>Add meg a tanúsítvány jelszavát</li>
-</ul>
-</li>
-<li>Nyomd meg az <code>Upload and Sign</code> gombot, és várj, ez egy kis ideig eltarthat</li>
-</ul>
-<h3 id="5-certificate-importálása"><a class="header" href="#5-certificate-importálása">5. Certificate importálása:</a></h3>
-<ul>
-<li>Menj a <code>Settings</code> fülre és kattints a <code>Add Certificate</code> gombra</li>
-<li>Kattints a <code>+</code>-ra és importáld a .mobileprovision-t a .p12-t és írd be a .p12 jelszavát aztán kattints a <code>Save</code> gombra</li>
-</ul>
-<h3 id="6-firka-telepítése"><a class="header" href="#6-firka-telepítése">6. Firka telepítése:</a></h3>
-<ul>
-<li>Amint telepített a Feather, nyisd meg és menj a <code>Sources</code> fülre alul</li>
-<li>Kattints a <code>Add Repo</code> gombra és másold be hogy <code>https://raw.githubusercontent.com/spitkov/firkarepo/refs/heads/main/feather.json</code> és kattints az <code>Add</code> gombra</li>
-<li>Menj a <code>Firka Repository</code> menüpontra és kattints a letöltésre</li>
-<li>Ha letöltött menj a <code>Library</code> fülre és kattints a Firka appra azután <code>Sign Firka</code> aztán <code>Start Signing</code></li>
-<li>A Signed Apps alatt látni fogod a firkát kattints rá és <code>Install Firka</code></li>
-</ul>
-<h2 id="2-esign-metódus"><a class="header" href="#2-esign-metódus">2. ESign metódus</a></h2>
-<h2 id="szükséged-van-ios-16-vagy-újabb-iosre"><a class="header" href="#szükséged-van-ios-16-vagy-újabb-iosre">Szükséged van iOS 16 vagy újabb iOSre.</a></h2>
-<h3 id="1-dns-profil-telepítése"><a class="header" href="#1-dns-profil-telepítése">1. DNS profil telepítése</a></h3>
-<ul>
-<li>Nyisd meg az <a href="https://whysoooofurious.netlify.app/">WSF Sideloading</a> weboldalt a Safariban</li>
-<li>Nyomj rá a <code>Downloads</code> gombra, majd a <code>Config Profiles</code> gombra</li>
-<li>Válaszd a <code>madNS</code> profilt</li>
-<li>A profil letöltése után nyisd meg a <strong>Beállításokat</strong></li>
-<li>A neved alatt megjelenik a <strong>Profil Letöltve</strong> (vagy angolul: <strong>Profile Downloaded</strong>)</li>
-<li>Nyomj rá, majd nyomd meg a <strong>Telepítés/Install</strong> gombot</li>
-<li>Kövesd az utasításokat (a felugró ablakokon nyomd a <strong>Következő/Next</strong> gombot)</li>
-<li>A telepítés után görgess le az <strong>Általános/General</strong> menüpontra</li>
-<li>Nyomj a <strong>VPN, DNS, és eszközfelügyelet</strong> (vagy iOS 18-ban: <strong>VPN és eszközfelügyelet</strong>) opcióra</li>
-<li>Válaszd a <strong>DNS</strong> opciót és válassz egyet a lehetőségek közül:
-<ul>
-<li><strong>Sima</strong>: Ajánlott, alap funkcionalitás</li>
-<li><strong>AdBlock</strong>: Letiltja a reklámokat (néhány script is letiltásra kerülhet, ami problémákat okozhat)</li>
-<li><strong>OTA blocker</strong>: Letiltja az Over-The-Air (Apple szerverekről küldött) frissítéseket</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-tanúsítványok-letöltése"><a class="header" href="#2-tanúsítványok-letöltése">2. Tanúsítványok letöltése</a></h3>
-<ul>
-<li>Menj vissza a korábban megnyitott weboldalra</li>
-<li>Nyomj a <code>Certificates</code> gombra, majd újra a <code>Certificates</code> opcióra</li>
-<li>Engedélyezd a fájl letöltését és töltsd le.</li>
-</ul>
-<h3 id="3-portal-telepítése"><a class="header" href="#3-portal-telepítése">3. Portal telepítése</a></h3>
-<ul>
-<li>Menj vissza a letöltési oldalra</li>
-<li>Nyomj a <code>Portal</code> gombra</li>
-<li>Próbáld meg az egyik <code>Portal - XXXXX</code> opciót</li>
-<li>Ha "<em>Integritás nem ellenőrizhető</em>" hibát kapsz, próbáld a többi lehetőséget</li>
-<li>Vannak ESign only certificatek, de ez minket nem zavar mivel ESign-t akarunk telepíteni, csak késöbb lesz másab</li>
-<li>Ha egyik sem működik, feketelistán lehetsz - írj a Firka Discord szerverbe segítségért, vagy olvasd el a "<a href="https://github.com/TheAppleUser1/Revoke-Fixing-Guide">Revoke Fix Guide</a>"-ot.</li>
-<li>Menj a beállitásokba utána Általános az alatt VPN és eszközfelügyelet ott keresd meg a Profilt amit letöltöttél menjn rá és azon belül kattints a megbizásra utána megbizás (vagy megbizás és újraindítás)</li>
-</ul>
-<h3 id="4-esign-telepítése"><a class="header" href="#4-esign-telepítése">4. ESign telepítése</a></h3>
-<ul>
-<li>Nyisd meg a <strong>Portal</strong>t</li>
-<li>Menj végig a beállítási folyamaton</li>
-<li>Navigálj a <code>Downloads</code> fülre</li>
-<li>Nyomd meg az <strong>ESign</strong> opciót, és válasszd ki ugyanazt amilyen nevű Portal-t tölöttél le, majd telepítsd ugyanúgy, mint a <strong>Portal</strong>-t</li>
-<li>Nyisd meg az <strong>ESignt</strong> és fogadd el a licencszerződést</li>
-</ul>
-<h3 id="5-tanúsítványok-telepítése"><a class="header" href="#5-tanúsítványok-telepítése">5. Tanúsítványok telepítése</a></h3>
-<ul>
-<li>Kattints alul a <code>File</code> gombra</li>
-<li>Aztán a 3 pöttyre jobb felül</li>
-<li>Keresd meg a letöltött <code>certificates.zip</code> file-t és importáld</li>
-<li>Kattints a zip-re és utána Unzip</li>
-<li>Keresd meg amilyen portál-t telepítettél</li>
-<li>Ha ESign only-s certificates Portált töltöttél le akkor a <code># ESign Only Certs</code> mappába találod</li>
-<li>Az ilyeneket úgy telepíted, hogy rányomsz a <code>certificatname.esigncert</code> fájlra utána <code>Import Certificate Managment</code></li>
-<li>Ha nem ESign only portált telepítettél akkor a mappába egy .p12 és .mobileprovision fájlt fogsz látni</li>
-<li>Előszőr kattints a .mobileprovision fájlra és Import (Itt egy kínai szöveg fog megjelenni xd)</li>
-<li>Azután kattints a .p12 fájlra és ha kér jelszót írd be, hogy <code>WSF</code></li>
-</ul>
-<h3 id="6-firka-telepítése-1"><a class="header" href="#6-firka-telepítése-1">6. Firka telepítése</a></h3>
-<ul>
-<li>Menj az <code>AppStore</code> fülre alul aztán bal felül kattints az <code>App Source</code> gombra azután jobb felül kattints az +-ra és másold be hogy <code>https://raw.githubusercontent.com/spitkov/firkarepo/refs/heads/main/esign.json</code></li>
-<li>Menj vissza és az AppStore fülben látni fogod a Firká-t</li>
-<li>Kattints hogy <code>Download</code></li>
-<li>A <code>Download</code> fülben láthatod a letöltést, ha letöltött kattints rá és nyomd meg a <code>Import App Library</code> gombot</li>
-<li>Azután menj a <code>Apps</code> fülre és válaszd ki a Firkát kattints a <code>Signature</code>-re aztán megint <code>Signature</code> (fontos ne lépj ki az esign-bol amíg nem jelentek meg az <code>Install</code> és az <code>Exit</code> gombok)</li>
-<li>Ha végzett kattints az <code>Install</code> gombra és fel fog jönni egy kis menü hogy esign.yyyue.xyz telepíteni akarja a Firkát akkor kattints arra hogy Telepítés</li>
-<li>És kész is 🎉</li>
-</ul>
-<h3 id="esign-faq"><a class="header" href="#esign-faq">ESign FAQ:</a></h3>
-<ul>
-<li>Q1: Törölhetem az ESignt meg a profilt amiután meg lett a Firka?</li>
-<li>A1: Igen, ha elakarod b*szni az egészet. Nem, ha meg szeretnéd tartani.</li>
-<li>Több kérdés? Írj a Firka Discord szerverébe.</li>
-</ul>
-<h2 id="3-sidestore-metódus-a-sidestore-az-altstore-nak-egy-jobb-verziója"><a class="header" href="#3-sidestore-metódus-a-sidestore-az-altstore-nak-egy-jobb-verziója">3. SideStore metódus (A SideStore az AltStore-nak egy jobb verziója)</a></h2>
-<h3 id="1-előfeltételek"><a class="header" href="#1-előfeltételek">1. Előfeltételek</a></h3>
-<ul>
-<li>Mac számítógép macOS 10.15 vagy újabb verzióval</li>
-<li>Apple fiók</li>
-<li>Internet kapcsolat</li>
-<li>iPhone iOS 14 vagy újabb verzióval</li>
-</ul>
-<h3 id="2-szükséges-fájlok-letöltése-maceden"><a class="header" href="#2-szükséges-fájlok-letöltése-maceden">2. Szükséges fájlok letöltése (Maceden)</a></h3>
-<ul>
-<li>AltServer: https://cdn.altstore.io/file/altstore/altserver.zip</li>
-<li>SideStore IPA: https://github.com/sidestore/sidestore/releases/latest/download/sidestore.ipa</li>
-<li>JitterBugPair: https://github.com/osy/Jitterbug/releases/download/v1.3.1/jitterbugpair-macos.zip</li>
-</ul>
-<h3 id="3-altserver-telepítése-és-beállítása-maceden"><a class="header" href="#3-altserver-telepítése-és-beállítása-maceden">3. AltServer telepítése és beállítása (Maceden)</a></h3>
-<ul>
-<li>Csomagold ki az AltServer-t a ZIP fájlból</li>
-<li>Helyezd át az Alkalmazások mappába</li>
-<li>Indítsd el az AltServer-t</li>
-</ul>
-<h3 id="4-sidestore-telepítése-maceden-és-az-iphoneodon"><a class="header" href="#4-sidestore-telepítése-maceden-és-az-iphoneodon">4. SideStore telepítése (Maceden és az iPhoneodon)</a></h3>
-<ul>
-<li>Csatlakoztasd az iPhone-od a Mac-hez</li>
-<li>Engedélyezd a "Megbízható számítógép" opciót az iPhone-on (ha kéri)</li>
-<li>A Mac menüsorában tartsd nyomva az Option⌥/Alt⌥ gombot</li>
-<li>Kattints az AltStore ikonra (rombusz alakú)</li>
-<li>Válaszd a "Sideload .ipa" opciót</li>
-<li>Válaszd ki az eszközöd nevét</li>
-<li>Válaszd ki a letöltött SideStore IPA fájlt</li>
-<li>Add meg az Apple fiókod adatait</li>
-<li>Várd meg a telepítést</li>
-<li>Az iPhone-on menj a Beállítások &gt; Általános &gt; VPN &amp; Eszközfelügyelet menübe</li>
-<li>Keresd meg az Apple email címed és nyomd meg a "Megbízható" gombot</li>
-</ul>
-<h3 id="5-fejlesztői-mód-engedélyezése-ios-16-vagy-újabb-esetén-iphoneodon"><a class="header" href="#5-fejlesztői-mód-engedélyezése-ios-16-vagy-újabb-esetén-iphoneodon">5. Fejlesztői mód engedélyezése (iOS 16 vagy újabb esetén) (iPhoneodon)</a></h3>
-<ul>
-<li>Menj a Beállítások &gt; Adatvédelem és Biztonság menübe</li>
-<li>Görgess az aljára</li>
-<li>Kapcsold be a Fejlesztői módot</li>
-<li>Várd meg az iPhone újraindulását</li>
-<li>Húzd fel a képernyőt az indítás közben amikor kéri</li>
-</ul>
-<h3 id="6-párosítás-beállítása-maceden"><a class="header" href="#6-párosítás-beállítása-maceden">6. Párosítás beállítása (Maceden)</a></h3>
-<ul>
-<li>Csomagold ki a JitterBugPair ZIP fájlt</li>
-<li>Állíts be jelkódot az iPhone-on (ha még nincs)</li>
-<li>Csatlakoztasd az iPhone-od</li>
-<li>Oldd fel az eszközt és hagyd a kezdőképernyőn</li>
-<li>Futtasd a JitterBugPair parancs fájlt</li>
-<li>A generált párosító fájl neve: "(UDID).mobiledevicepairing"</li>
-<li>Tömörítsd be a párosító fájlt</li>
-<li>Küldd át az iPhone-ra (AirDrop vagy email)</li>
-<li>Az iPhone-on nyisd meg a Fájlok alkalmazást</li>
-<li>Csomagold ki a ZIP fájlt.</li>
-</ul>
-<h3 id="7-wireguard-vpn-beállítása-iphoneodon"><a class="header" href="#7-wireguard-vpn-beállítása-iphoneodon">7. WireGuard VPN beállítása (iPhoneodon)</a></h3>
-<ul>
-<li>Töltsd le a WireGuard VPN alkalmazást az App Store-ból: https://apps.apple.com/us/app/wireguard/id1441195209 <a href="https://apps.apple.com/us/app/wireguard/id1441195209">WireGuard App Store link</a></li>
-<li>Telepítsd az alábbi Configuration Fájlt: https://github.com/sidestore/sidestore/releases/download/0.1.1/sidestore.conf Amint ez megvan, nyisd meg a Fájlok alkalmazást, és keresd meg hogy "SideStore.conf". Nyomj rá hosszan és "oszd meg". A Megosztó ablakba ha kell, görgess a "Több/More" gombra, és nyisd meg a WireGuard-al.</li>
-<li>Nyomj az Engedélyezésre mikor azt mondja hogy: "A "WireGuard" VPN konfigurációt szeretne hozzáadni". Megynyitja a Beállításokat. Mikor kéri, írd be a jelkódodat. Ez vissza fog dobni a WireGuardba. Kapcsold be a SideStore-t. (Ez a "VPN" quote-unquote nem egy VPN, csak letiltja az Applenek az oscp-jét. Az OSCP az ami ellenőrzi hogy mit sideloadingolsz. Magyarúl, ez bisztonságos)</li>
-</ul>
-<h3 id="8-sidestore-app-beállítása-iphoneodon"><a class="header" href="#8-sidestore-app-beállítása-iphoneodon">8. SideStore app beállítása (iPhoneodon)</a></h3>
-<ul>
-<li>Indítsd el a SideStore alkalmazást</li>
-<li>Nyomj az OK gombra</li>
-<li>Válaszd ki a párosító fájlt</li>
-<li>Jelentkezz be az Apple Fiókoddal</li>
-</ul>
-<h3 id="megjegyzések"><a class="header" href="#megjegyzések">Megjegyzések:</a></h3>
-<ul>
-<li>Ha frissíted az eszközöd, újra kell csinálnod a párosítást</li>
-<li>Új párosító fájl hozzáadásához:
-<ul>
-<li>Menj a SideStore beállításaiba</li>
-<li>Nyomd meg a "Reset Pairing File" gombot</li>
-<li>Add hozzá az új verziót</li>
-<li>Sajnáljuk a komplikált fojamatot. Sajnálatos módon a Testflight vagy az App Storera való kitétel jelenleg nem nagyon egy opció, mivel az Applenek 100 eurós fejelsztői membership vásárlása kötelező.</li>
-</ul>
-</li>
-</ul>
-<h2 id="kreditek"><a class="header" href="#kreditek">Kreditek</a></h2>
-<ul>
-<li><strong>A Firka csapat</strong>: Az app zöld verziójának fejlesztői
-<ul>
-<li>Discord: <a href="https://discord.gg/6awUPSMFKe">https://discord.gg/6awUPSMFKe</a></li>
-<li>GitHub: <a href="https://github.com/QwIT-Development/app-legacy">https://github.com/QwIT-Development/app-legacy</a></li>
-</ul>
-</li>
-<li><strong>WSF</strong>: A Permanent Signing lehetővé tétele
-<ul>
-<li>X (korábban Twitter): <a href="https://x.com/wsf_team">https://x.com/wsf_team</a></li>
-</ul>
-</li>
-<li><strong>Spitkov</strong>: A Feather útmutató írója, és a repok készítője/maintainelője.
-<ul>
-<li>Weboldal: <a href="https://spitkov.hu">https://spitkov.hu</a></li>
-</ul>
-</li>
-<li><strong>TheAppleUser</strong>: Az Esign és SideStore útmutató írója.
-<ul>
-<li>X (korábban Twitter): <a href="https://x.com/TheAppleUser11">https://x.com/TheAppleUser11</a></li>
-</ul>
-</li>
-</ul>
+                        <h1 id="qwit-docs"><a class="header" href="#qwit-docs">QwIT Docs</a></h1>
+<p>valamit ide kéne irnom</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
+                            <a rel="next prefetch" href="Firka/ipa_telepites.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -394,6 +174,9 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
+                    <a rel="next prefetch" href="Firka/ipa_telepites.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
